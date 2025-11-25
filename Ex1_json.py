@@ -91,6 +91,20 @@ print(library)
 # Write your code below:
 # NOTE: This loop will become the "home" for all your future code!
 
+usr_choice = ""
+choices = ["1. View all books. ", "2. Search for book. ", "3. Exit. "]
+
+while usr_choice != 3: 
+    print("--- BOOK INVENTORY ---")
+    for i in choices:
+        print(i)
+    else:
+        break
+    if usr_choice == 3:
+        print("Goodbye!")
+    else:
+        print("Invalid choice.")
+    # usr_choice = int(input("Type the number of the"))
 
 
 
