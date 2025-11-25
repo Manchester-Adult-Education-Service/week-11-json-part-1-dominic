@@ -52,8 +52,10 @@ import json  # We need this tool to read the external file
 # Write your code below:
 
 
+with open('books.json', 'r') as file:
+    library = json.load(file)
 
-
+print(library)
 # -------------------------------------------
 # CHECKPOINT
 # -------------------------------------------
