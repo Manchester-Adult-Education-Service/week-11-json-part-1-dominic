@@ -96,7 +96,7 @@ with open('books.json', 'r') as file:
 
 
 
-usr_choice = ""
+usr_choice = "0"
 choices = ["1. View all books. ", "2. Search for book. ", "3. Exit. "]
 
 while usr_choice != "3": 
@@ -106,13 +106,24 @@ while usr_choice != "3":
     usr_choice = int(input("Please choose from the following options: "))
     if usr_choice == "3":
         print("Goodbye!")
-    # else:
-    #     print("Invalid choice.")
-    if usr_choice == 1:
-        for a in library:
-            print(a)
     else:
-        break
+        print("Invalid choice.")
+    if usr_choice == 1:
+        if len(library) == 0:
+            print("No book in the inventery")
+        else:
+            print("Current inventory")
+            print("-" *10)
+            for book in library:
+                print(f"""Title: {book['title']} |
+                 Author: {book['author']} | Stock: {book['stock']}""")
+                print("-" *10)
+            
+    elif usr_choice == "3":
+        print("Goodbye! closing the program")
+    else:
+        print("Invalid choice (or feature coming soon). Please try again.")
+        
 
 
 
