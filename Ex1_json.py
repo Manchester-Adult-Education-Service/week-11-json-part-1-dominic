@@ -56,7 +56,7 @@ with open('books.json', 'r') as file:
     library = json.load(file)
 
 
-# print(library)
+#print(library)
 
 
 # -------------------------------------------
@@ -97,18 +97,20 @@ with open('books.json', 'r') as file:
 
 
 usr_choice = "0"
-choices = ["1. View all books. ", "2. Search for book. ", "3. Exit. "]
 
-while usr_choice != "3": 
+
+while usr_choice != "3":
+    print()
     print("--- BOOK INVENTORY ---")
-    for i in choices:
-        print(i)
-    usr_choice = int(input("Please choose from the following options: "))
-    if usr_choice == "3":
-        print("Goodbye!")
-    else:
-        print("Invalid choice.")
-    if usr_choice == 1:
+    print("1. View all books.")
+    print("2. Search for book.")
+    print("3. Exit.")
+    print()
+    usr_choice = input("Please select an option\n")
+    print()
+    
+
+    if usr_choice == "1":
         if len(library) == 0:
             print("No book in the inventery")
         else:
